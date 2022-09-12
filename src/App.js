@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
+  let  classNameItem = 'card';
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<div className={classNameItem}>
+    <h2>Bart</h2>
+    <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
+</div>
+
+        <div className={classNameItem}>
+            <h2>Bart</h2>
+            <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
+        </div>
+
+        <div className={classNameItem}>
+            <h2>Bart</h2>
+            <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
+        </div>
     </div>
   );
 }
