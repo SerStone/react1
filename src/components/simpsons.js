@@ -7,6 +7,7 @@ function Simpsons(props){
             <img src={pic} alt={'Simpsons'}/>
         </div>
     );
+
 }
 
 export default Simpsons;

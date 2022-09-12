@@ -7,6 +7,9 @@ function App() {
      <Simpsons itemName={'Bart'} pic={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'}/>
     </div>
   );
+
+
+
 }
 
 export default App;
