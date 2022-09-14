@@ -1,1 +1,92 @@
+body{
+    background-image: linear-gradient(45deg, #de6615 0%, #F09819  51%, #FF512F  100%);
+}
+.wrap {
+    width: 100%;
+    height:100%;
+    gap: 100px;
 
+}
+h1{
+
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+
+}
+
+h2{
+    color: white;
+    font-size: 20px;
+    font-family: Verdana sans-serif;
+}
+p{
+    color: white;
+    font-size: 20px;
+    font-family: Verdana sans-serif;
+}
+.simpCont {
+    margin-top: 90px;
+    justify-content: center;
+    width: 100%;
+    height:350px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.card{
+    width: 18%;
+    height: auto;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg, #c76c00 0%, #eaa30e 51%, rgba(229, 218, 33, 0.16) 100%);
+}
+img{
+    width: 250px;
+    height: 300px;
+}
+.card>img{
+    width: 250px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 60%;
+}
+.mortyCont {
+    margin-top: 90px;
+    justify-content: center;
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+.card1{
+    width: 18%;
+    height: auto;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 5px;
+
+}
+.futCont {
+    margin-top: 70px;
+    justify-content: center;
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.card2{
+    width: 30%;
+    height: auto;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg, #e1a100 0%, #e77b00 51%, rgba(250, 200, 7, 0.16) 100%);
+}
