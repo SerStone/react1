@@ -1,11 +1,20 @@
 import './App.css';
 import Users from "./components/Users/Users";
+import Flights from "./components/SpaceX/Flights/Flights";
+
+
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
+
+
+
   return (
     <div className="App">
-<Users/>
+
+      {/*<Flights/>*/}
+{/*        Запускає завдання зі SpaceX*/}
+{/*<Users/>*/}
+        {/*        Запускає завдання зі з jsonplaceholder отримати всіх юзерів в компоненту Users.js*/}
     </div>
   );
 }

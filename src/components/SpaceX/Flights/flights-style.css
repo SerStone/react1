@@ -1,0 +1,43 @@
+.flightsAll{
+width: 100%;
+height: 100%;
+    background-image: linear-gradient(45deg, #3535c4 0%, #2a4867 51%, #5d75b4 100%);
+    margin: -23px auto 0;
+}
+.flight-board{
+    text-align: center;
+    color: white;
+    font-family: Arial sans-serif;
+    margin: 0 auto;
+}
+.flights{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.flight{
+    width: 9%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid silver;
+    border-radius: 40%;
+}
+.flight>img{
+    width: 100px;
+    height: 100px;
+}
+.flight>h2{
+    font-size: 8px;
+    color: white;
+    font-family: Arial sans-serif;
+    width: 80px;
+    text-align: center;
+}
