@@ -1,5 +1,6 @@
 import User from '../User/User';
-import './user style/userMain.css'
+// import './user style/userMain.css'
+import {getUsersAxios,getPostsAxios} from "../../services/axiosGetter";
 
 import {useEffect, useState} from "react";
 
@@ -13,13 +14,8 @@ export default  function Users(){
     }
 
     useEffect(()=>{
+        getUsersAxios().then(value => setUsers(value))
 
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-                setUsers(value)
-                console.log(value);
-            })
     },[])
 
 
