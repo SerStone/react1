@@ -1,5 +1,6 @@
 import User from '../User/User';
-// import './user style/userMain.css'
+import './user-style/user-style.css'
+
 import {getUsersAxios} from "../../services/axiosGetter";
 
 import {useEffect, useState} from "react";
