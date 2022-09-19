@@ -27,4 +27,3 @@ export default  function Users({getPostsId}){
     );
 };
 
-// export default Users;

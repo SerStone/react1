@@ -1,8 +1,10 @@
-const Post = ({post,post:{body,title}}) =>{
-    console.log(post)
+
+
+
+const Post = ({post,post:{body,title,userId}}) =>{
     return(
-        <div className={'post'}>
-            <h2>{title}</h2>
+        <div className={'post'} >
+            <h2>{userId}. {title}-</h2>
             <p>{body}</p>
         </div>
     )
