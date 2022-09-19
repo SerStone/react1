@@ -13,9 +13,7 @@ export default function User (props){
         <div className={'user'}>
             <h2>{id}. {name}</h2>
             <button onClick={()=>{getPostsId(id)
-                userDetail()
-
-            }
+                userDetail()}
 
             }>Show more</button>
         </div>
