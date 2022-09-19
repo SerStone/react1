@@ -8,7 +8,7 @@ import {useState} from "react";
 function App() {
     let [posts,setPosts] = useState([]);
 
-  // eslint-disable-next-line no-unused-vars
+
 let getPostsId=(id)=>{
     getPostsAxios(id).then(value => setPosts(value.data))
 }
