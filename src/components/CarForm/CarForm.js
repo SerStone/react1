@@ -5,14 +5,18 @@ import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../../validators";
 
 import {carService} from "../../services";
+
+
 import {useEffect} from "react";
 
-const CarForm = ({setCars,updateCar}) => {
+
+
+const CarForm = ({setCars,carUpdate}) => {
     const {register,handleSubmit,reset,formState:{isValid,errors},setValue} = useForm({
         resolver:joiResolver(carValidator),
         mode:'all'});
 
-    const {id,model,price,year} = updateCar
+    const {id,model,price,year} = carUpdate
 
     const submit = async (car) =>{
         if (id){
@@ -31,7 +35,7 @@ const CarForm = ({setCars,updateCar}) => {
         setValue('model',model);
         setValue('price',price);
         setValue('year',year);
-    },[id])
+    },[id, model, price, setValue, year])
 
 
 
