@@ -32,12 +32,17 @@ const CarForm = ({setCars,carUpdate}) => {
         }
     };
 
-    useEffect(()=>{
-        setValue('model',model);
-        setValue('price',price);
-        setValue('year',year);
-    },[id, model, price, setValue, year])
 
+
+    useEffect(()=>{
+
+        setValue('model',model);
+
+        setValue('price',price);
+
+        setValue('year',year);
+
+    },[id, model, price, setValue, year])
 
 
     return (

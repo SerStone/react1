@@ -9,7 +9,6 @@ import {carService} from "../../services";
 import {Car} from "../Car/Car";
 
 
-
 const Cars = () => {
 const [cars,setCars] = useState([]);
 const [carUpdate,setUpdate] =useState([]);
