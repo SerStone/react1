@@ -6,6 +6,7 @@ import {carValidator} from "../../validators";
 
 import {carService} from "../../services";
 
+import css from './CarForm.module.css'
 
 import {useEffect} from "react";
 
@@ -40,15 +41,14 @@ const CarForm = ({setCars,carUpdate}) => {
 
 
     return (
-        <form onSubmit={handleSubmit(submit)} onChange={()=>console.log(errors)}>
-            <input type="text" placeholder={'model'} {...register('model')}/>
+        <form className={css.CarForm} onSubmit={handleSubmit(submit)} onChange={()=>console.log(errors)}>
+            <input className={css.inputed} type="text" placeholder={'model'} {...register('model')}/>
             {errors.model&&<span>{errors.model.message}</span>}
-            <input type="text" placeholder={'price'} {...register('price', {valueAsNumber:true})}/>
+            <input className={css.inputed} type="text" placeholder={'price'} {...register('price', {valueAsNumber:true})}/>
             {errors.price&&<span>{errors.price.message}</span>}
-            <input type="text" placeholder={'year'} {...register('year',{valueAsNumber:true})}/>
+            <input className={css.inputed} type="text" placeholder={'year'} {...register('year',{valueAsNumber:true})}/>
             {errors.year&&<span>{errors.year.message}</span>}
-
-            <button disabled={!isValid}>{id ?'Update':'Save'}</button>
+            <button disabled={!isValid}>{id ?'Modify':'Save'}</button>
         </form>
     );
 };

@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react"
 
+import css from './Cars.module.css'
+
 import {CarForm} from "../CarForm/CarForm";
 
 import {carService} from "../../services";
@@ -19,7 +21,10 @@ useEffect(()=>{
         <div>
             <CarForm setCars={setCars} carUpdate={carUpdate}/>
             <hr/>
+            <div className={css.Cars}>
+
             {cars.map((car,index)=><Car key={index} setCars={setCars} car={car} setUpdate={setUpdate}/>)}
+            </div>
         </div>
     );
 };
