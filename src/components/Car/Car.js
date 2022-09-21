@@ -23,13 +23,13 @@ const Car = ({car,setCars,setUpdate}) => {
     return (
         <div className={css.Car}>
             <div>
-            <div>id:{id}</div>
-            <div>model:{model}</div>
-            <div>price:{price}</div>
-            <div>year:{year}</div>
+            <div>Id: {id}</div>
+            <div>Model: {model}</div>
+            <div>Price: {price}</div>
+            <div>Year: {year}</div>
             </div>
             <div className={css.tools}>
-                <button onClick={() => updateCar(id)}>Update</button>
+                <button onClick={() => updateCar()}>Update</button>
                 <button onClick={() => deleteCar(id)}>Delete</button>
             </div>
         </div>
