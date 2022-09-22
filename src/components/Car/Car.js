@@ -16,10 +16,6 @@ const Car = ({car,setCars,setUpdate}) => {
         })
     }
 
-    const updateCar = ()=>{
-        setUpdate(car);
-    }
-
     return (
         <div className={css.Car}>
             <div>
@@ -29,7 +25,7 @@ const Car = ({car,setCars,setUpdate}) => {
             <div>Year: {year}</div>
             </div>
             <div className={css.tools}>
-                <button onClick={() => updateCar()}>Update</button>
+                <button onClick={() => setUpdate(car)}>Update</button>
                 <button onClick={() => deleteCar(id)}>Delete</button>
             </div>
         </div>
