@@ -1,18 +1,30 @@
 import './App.css';
+import {Comments, Posts} from "./components";
+import {Users} from "./components";
+import {useState} from "react";
+import {postService} from "./services/post.service";
+import {commentService} from "./services/comment.service";
 
-import {Cars} from "./components";
+
 
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  let  classNameItem = 'card';
+    const [posts, setPosts] = useState([])
+    const getUserId = (userId) => {
+        postService.getPosts(userId).then(({data}) => setPosts(data))
+    }
+    const [comments, setComments] = useState([])
+    const getPostId = (postId) => {
+        commentService.getComments(postId).then(({data}) => setComments(data))
+    }
+
   return (
     <div className="App">
-
-
-    <Cars/>
-
-
+      <Users getUserId={getUserId}/>
+      <Posts posts={posts} setPosts={setPosts}
+             getPostId={getPostId}
+      />
+      <Comments comments={comments} setComments={setComments}/>
     </div>
   );
 }
