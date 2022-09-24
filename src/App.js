@@ -1,24 +1,32 @@
 import './App.css';
+import {BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  Outlet
+} from "react-router-dom";
+import {Albums, Comments, Todos} from "./components";
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  let  classNameItem = 'card';
+
   return (
     <div className="App">
-<div className={classNameItem}>
-    <h2>Bart</h2>
-    <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
-</div>
+<ul>
+  <li><Link to={'/'}>Home Page</Link></li>
+  <li><Link to={'/todos'}>Todos</Link></li>
+  <li><Link to={'/albums'}>Albums </Link></li>
+    <li><Link to={'/comments'}>Comments</Link></li>
+</ul>
+      <hr/>
+      <Routes>
+        <Route path={'/'} element={'Home'}/>
 
-        <div className={classNameItem}>
-            <h2>Bart</h2>
-            <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
-        </div>
+        <Route path={'todos'} element={<Todos/>}/>
 
-        <div className={classNameItem}>
-            <h2>Bart</h2>
-            <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
-        </div>
+          <Route path={'albums'} element={<Albums/>}/>
+
+          <Route path={'comments'} element={<Comments/>}/>
+      </Routes>
     </div>
   );
 }
