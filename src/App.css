@@ -1,1 +1,158 @@
+.Navbar{
 
+    background: linear-gradient(45deg, transparent  10%, #ff124d 5%);
+justify-content: space-evenly;
+    display: flex;
+    height: 90px;
+    width: 100%;
+
+    align-items: center;
+
+
+}
+ul{
+list-style-type: none;
+}
+.Navbar>li>a {
+text-decoration: none;
+    color: white;
+    font-family: Verdana sans-serif;
+    font-size: 25px;
+    margin: 10px;
+    font-weight: bold;
+
+
+}
+
+.Home {
+    margin-top: 50px;
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+    font-family: Century sans-serif;
+    font-size: 36px;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #a4a4a4;
+}
+
+.Todo {
+    width: 19%;
+    height: 175px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 15px;
+    color: white;
+    font-family: Arial sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Todos{
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.Album {
+    width: 19%;
+    height: 230px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 25px;
+    color: white;
+    font-family: Arial sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+.Album>a{
+
+    color: silver;
+font-size: 25px;
+}
+
+.Albums{
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.Comment {
+    width: 24%;
+    height: 270px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 25px;
+    color: white;
+    font-family: Arial sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+.Comment>a{
+
+    color: silver;
+    font-size: 25px;
+}
+
+.Comments{
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.Posts{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    display: flex;
+   align-items: center;
+    justify-content: center;
+}
+
+.Post {
+    width: 50%;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 25px;
+    color: white;
+    font-family: Arial sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+
+.Navbar a:hover {
+    background-color: #c90707;
+    color: white;
+    border-radius: 20%;
+}
+
+.Navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 50%;
+
+}

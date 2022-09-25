@@ -4,7 +4,7 @@ const Todo = ({todo}) => {
 let newIce = todo.completed.toString()
 
     return (
-        <div>
+        <div className={'Todo'}>
 
             <h3>UserId: {todo.userId} - ID: {todo.id} <br/>
                 Title :{todo.title}</h3>

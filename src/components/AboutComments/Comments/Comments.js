@@ -10,7 +10,7 @@ const Comments = () => {
 
     },[])
     return (
-        <div>
+        <div className={'Comments'}>
             {
                 comments.map(comment => <Comment key={comment.id} comment={comment}/>)
             }
