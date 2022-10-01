@@ -1,25 +1,29 @@
 import './App.css';
+import {useReducer, useState} from "react";
+
+
+const init = (intialValue) =>{
+  return {catObj:intialValue,dogObj:intialValue}
+}
+
+const reducer = (state,action) => {
+switch (action.type){
+  case 'DOG':
+    return {...state,dogObj:state}
+}
+}
+
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  let  classNameItem = 'card';
+  const [state,dispatch] = useReducer(reducer,[])
+  const [name, setName] = useState('')
+
+
+
   return (
-    <div className="App">
-<div className={classNameItem}>
-    <h2>Bart</h2>
-    <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
-</div>
-
-        <div className={classNameItem}>
-            <h2>Bart</h2>
-            <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
-        </div>
-
-        <div className={classNameItem}>
-            <h2>Bart</h2>
-            <img src={'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'} alt={'ddd'}/>
-        </div>
-    </div>
+<form>
+  <input type={'text'} value={name} onChange={e =>setName(e.target.value)}/>
+</form>
   );
 }
 
