@@ -1,25 +1,26 @@
-import {CREATE, DELETE} from "./actions";
+import {Add, Del} from "./actions";
+
 import {useReducer} from "react";
 
+
 const reducer = (state, action) => {
+
     switch (action.type) {
-        case CREATE :
-            const newAnimal = {
+        case Add :
+            const tmp = {
                 name: action.payload.name,
                 id: new Date().getTime()
             }
-            return [...state, newAnimal]
-
-
-        case DELETE :
-            const index = state.findIndex(value => value.id === action.payload.id)
-            if(index!==-1){
-                state.splice(index,1)
+            return [...state, tmp]
+        case Del :
+            const id = state.findIndex(value => value.id === action.payload.id)
+            if(id!==-1){
+                state.splice(id,1)
             }
             return [...state]
     }
 }
+const useReduceAnim = () => useReducer(reducer, []);
 
-const useAnimalReducer = () => useReducer(reducer, []);
 
-export {useAnimalReducer};
+export {useReduceAnim};

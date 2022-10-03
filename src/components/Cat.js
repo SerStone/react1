@@ -1,10 +1,8 @@
 const Cat = ({cat, deleteCat}) => {
 
     return(
-        <div>
-            {cat.name}
-            <button onClick={()=> deleteCat(cat.id)}>Delete</button>
-        </div>
+        <div className={'animal'}>{cat.name}
+        <button onClick={()=> {deleteCat(cat.id)}}>Remove</button></div>
     )
 
 }

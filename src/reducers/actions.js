@@ -1,7 +1,7 @@
-const CREATE = 'CREATE';
-const DELETE = 'DELETE';
+const Add = 'Add';
+const Del = 'Del';
 
 export {
-    CREATE,
-    DELETE
+    Add,
+    Del
 }

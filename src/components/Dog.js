@@ -2,12 +2,8 @@ const Dog = ({dog, deleteDog}) => {
 
 
     return(
-        <div>
-
-
-              {dog.name}
-            <button onClick={()=> deleteDog(dog.id)}>Delete</button>
-        </div>
+        <div className={'animal'}>{dog.name}
+            <button onClick={()=> deleteDog(dog.id)}>Remove</button></div>
     )
 
 }
