@@ -5,3 +5,4 @@ export * from './About-posts/Post/Post';
 export * from './About-comments/Comments/Comments';
 export * from './About-comments/Comment/Comment';
 export * from './Home';
+export * from './Navigation';
