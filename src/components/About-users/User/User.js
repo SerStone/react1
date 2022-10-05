@@ -5,7 +5,10 @@ const User = ({user}) => {
         <div className={'User'}>
             {user.id}. {user.name}
             <br/>
-            {user.email}
+            {user.username}
+            <br/>
+            {user.email}   <br/>
+            {user.company.catchPhrase}
         </div>
     );
 };

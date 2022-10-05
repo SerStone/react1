@@ -1,1 +1,136 @@
 
+.Navbar{
+
+    background: linear-gradient(45deg, transparent  10%, #ff124d 5%);
+    justify-content: space-evenly;
+    display: flex;
+    height: 90px;
+    width: 100%;
+
+    align-items: center;
+
+
+}
+ul{
+    list-style-type: none;
+}
+.Navbar>li>a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana sans-serif;
+    font-size: 25px;
+    margin: 10px;
+    font-weight: bold;
+
+
+}
+
+.Home {
+    margin-top: 50px;
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+    font-family: Century sans-serif;
+    font-size: 36px;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #a4a4a4;
+}
+
+
+.Comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 24%;
+    height: 270px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 25px;
+    color: white;
+    font-family: Arial sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+.Comments{
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.Posts{
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 24%;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 25px;
+    color: white;
+    font-family: Arial sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+.Users{
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.User {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 24%;
+    height: 250px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #cc0231, #f5bac2);
+    border-radius: 25px;
+    color: white;
+    font-family: Arial sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+
+.Navbar a:hover {
+    background-color: #c90707;
+    color: white;
+    border-radius: 20%;
+}
+
+.Navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 50%;
+
+}
