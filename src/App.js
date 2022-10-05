@@ -1,11 +1,12 @@
 import './App.css';
-import {Users} from "./components";
+import {MainLayout} from "./layouts/MainLayout";
+
 
 function App() {
 
   return (
     <div className="App">
-<Users/>
+        <MainLayout/>
     </div>
   );
 }
