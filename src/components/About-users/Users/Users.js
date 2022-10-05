@@ -17,9 +17,9 @@ const Users = () => {
     },[])
 
     return (
-        <div>
+        <div className={'Users'}>
             {
-                users.map(stat => <User/>)
+                users.map(user => <User key={user.id} user={user}/>)
             }
         </div>
     );
