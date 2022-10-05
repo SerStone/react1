@@ -41,10 +41,27 @@ const postReducer =( state = {posts: [], post:null},action) => {
             return state;
     }
 }
+const commentReducer =( state = {comments: [], comment:null},action) => {
+    switch (action.type){
+        case "Comments":
+            return{
+                ...state,
+                comments: action.payload
+            };
+        case "Comment":
+            let id = action.payload;
+            let comment = state.comments.find(value => value.id === id)
+            return{...state, comment:comment}
+
+        default:
+            return state;
+    }
+}
 
 let reducer = combineReducers({
     userReducer,
-    postReducer
+    postReducer,
+    commentReducer
 });
 let store = createStore(reducer);
 
