@@ -1,4 +1,6 @@
-import './App.css';
+import React from "react";
+import {Routes,Route} from "react-router-dom";
+
 import {Header, Posts, Users} from "./componenets";
 
 function App() {
@@ -7,9 +9,10 @@ function App() {
     <div className="App">
 <Header/>
       <div>
-          <Users/>
-        <Posts/>
-
+          <Routes>
+              <Route path={'/users'} element={<Users/>}/>
+              <Route path={'/posts'} element={<Posts/>}/>
+          </Routes>
       </div>
     </div>
   );
