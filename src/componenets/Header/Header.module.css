@@ -1,9 +1,16 @@
 .Header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     background: linear-gradient(#ff8a8a, #4e57a2);
     color: snow;
     font-size: 28px;
     height: 50px;
-    font-weight: bold;
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    color: seashell;
+    text-decoration: none;
+    cursor: pointer;
+
 }

@@ -11,6 +11,7 @@
     background: linear-gradient(#e66465, #9198e5);
     color: snow;
     border-radius: 10px;
+
 }
 
 
@@ -19,8 +20,8 @@
     background: linear-gradient(#849385, #87668d);
     text-decoration: none;
     display: inline-block;
-    margin: 10px 20px;
-    padding: 10px 30px;
+    margin: 3px 20px;
+    padding: 10px 25px;
     position: relative;
     border: 2px solid #ffffff;
     color: #ffffff;
