@@ -1,0 +1,21 @@
+.post {
+    width: 19%;
+    height: 300px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(#e66465, #9198e5);
+    color: snow;
+    border-radius: 10px;
+}
+
+
+
+
+.buttonPost {
+}
+
