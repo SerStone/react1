@@ -11,9 +11,12 @@
     gap: 10px;
     margin: 0 auto 10px;
 }
-
-
-
+.menu{
+position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
 
 button {
     background: #1b2631;
@@ -26,6 +29,8 @@ button {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     transition: .4s;
+cursor: pointer;
+
 }
 button:after {
     content: "";
@@ -44,5 +49,6 @@ button:hover:after {
     border-color: #ffffff;
     width: calc(100% - 10px);
     height: calc(100% + 10px);
+
 
 }

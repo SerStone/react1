@@ -1,22 +1,18 @@
 import {useForm} from "react-hook-form";
-
+import {useEffect} from "react";
 import {joiResolver} from "@hookform/resolvers/joi";
+import {useDispatch, useSelector} from "react-redux";
 
 import {carValidator} from "../../validators";
-
-import {carService} from "../../services";
-
 import css from './CarForm.module.css'
+import {carActions} from "../../redux";
 
-import {useEffect} from "react";
+const CarForm = () => {
+    const {carUpdate} = useSelector(state => state.carReducer)
 
-
-
-const CarForm = ({setCars,carUpdate,setUpdate}) => {
     const {register,handleSubmit,reset,formState:{isValid,errors},setValue} = useForm({
         resolver:joiResolver(carValidator),
         mode:'all'});
-
 
         useEffect(()=>{
             if (carUpdate){
@@ -24,23 +20,16 @@ const CarForm = ({setCars,carUpdate,setUpdate}) => {
             setValue('price',carUpdate.price,{shouldValidate:true});
             setValue('year',carUpdate.year,{shouldValidate:true});
             }
-
-
         },[carUpdate,setValue])
 
-        const submit = async (car) =>{
+    const dispatch = useDispatch();
+
+    const submit = async (car) =>{
             if (carUpdate){
-                const {data} = await carService.updateById(carUpdate.id,car);
-                setCars(cars =>{
-                            const finder = cars.find(value=>value.id === carUpdate.id);
-                            Object.assign(finder,data);
-                            setUpdate(null)
-                            return [...cars]
-                        })
+               dispatch(carActions.updateById({id:carUpdate.id, car}))
             }
             else {
-                const {data} = await carService.create(car);
-                setCars(cars =>[...cars,data])
+               dispatch(carActions.create({car}))
             }
                 reset()
         };
@@ -54,9 +43,7 @@ const CarForm = ({setCars,carUpdate,setUpdate}) => {
             <input className={css.inputed} type="text" placeholder={'year'} {...register('year',{valueAsNumber:true})}/>
             {errors.year&&<span>{errors.year.message}</span>}
             <button disabled={!isValid}>{carUpdate?'Modify':'Save'}</button>
-
         </form>
-
     );
 };
 

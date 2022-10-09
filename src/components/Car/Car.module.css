@@ -1,19 +1,19 @@
+body{
+
+}
 .Car{
     border: 2px solid silver;
     margin: 10px;
     display: flex;
-    /*flex-direction: column;*/
     align-items: center;
     height: 200px;
     width: 300px;
-    /*background-image: linear-gradient(45deg, #24216e 0%, #1d505b 51%, #36738d 100%);*/
     border-radius: 10px;
     font-family: Arial sans-serif;
     color: white;
     text-align: center;
     flex-direction: column;
     justify-content: center;
-
 
 }
 .tools button{
@@ -50,6 +50,7 @@
     font-family: 'Montserrat', sans-serif;
     transition: .4s;
 }
+
 .tools button:after {
     content: "";
     position: absolute;
