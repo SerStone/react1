@@ -19,7 +19,9 @@ const Users = () => {
         <div>
             {loading && <h1>Wait Please!!!</h1>}
             {error&&<h1>Broken Computer!!!</h1>}
+            <div className={css.userDiv}>
             {userFromAPI&&userFromAPI.email}
+            </div>
         <div className={css.Users}>
             {users.map(user=><User key={user.id} user={user}/>)}
         </div>

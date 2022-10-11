@@ -19,7 +19,9 @@ const Posts = () => {
         <div>
             {loading && <h1>Wait Please!!!</h1>}
             {error&&<h1>Broken Computer!!!</h1>}
+            <div className={css.postDiv}>
             {postFromAPI&&postFromAPI.title}
+            </div>
             <div className={css.Posts}>
             {posts.map(post=><Post key={post.id} post={post}/>)}
             </div>
