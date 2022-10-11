@@ -3,8 +3,8 @@ import {useEffect} from "react";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {useDispatch, useSelector} from "react-redux";
 
+import css from './CarForm.module.css';
 import {carValidator} from "../../validators";
-import css from './CarForm.module.css'
 import {carActions} from "../../redux";
 
 const CarForm = () => {

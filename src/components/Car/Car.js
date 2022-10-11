@@ -1,6 +1,7 @@
 import css from './Car.module.css'
-import {useDispatch} from "react-redux";
 import {carActions} from "../../redux";
+
+import {useDispatch} from "react-redux";
 
 const Car = ({car}) => {
 
