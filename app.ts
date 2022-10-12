@@ -71,36 +71,55 @@ const rocket: IFalcon = {
 //     Зверніть увагу там де масиви... в них може бути багато однотипних обїектів
 //
 
-
+//
 console.log(rocket.mission_name);
 console.log(rocket.rocket.second_stage.payloads[0].payload_type);
-// console.log(rocket.rocket.first_stage.cores[0]);
+
 
 //
 // ---------------------------------------------------------------------------—————————
 // 2) протипізувати функції:
-//
-//     const user = {
-//         name:"Max",
-//         age:18,
-//         gender:'male'
-//     }
+
+interface IUser {
+    name: string,
+    age: number,
+    gender: string
+}
+    const user :IUser = {
+        name:"Max",
+        age:18,
+        gender:'male'
+    }
+console.log(user.gender);
+
+
 //
 // function sum(a,b){
 //     return a+b
 // }
+
+function sum(a:number,b:number):number{
+    return a+b
+}
+
 // function showSum(a,b){
 //     console.log(a + b);
 // }
-//
+
+function showSum(a:number,b:number):void{console.log(a+b)}
+
 // function incAge(someUser, inc){
 //     someUser.age+=inc
 //     return someUser
 // }
+function incAge(someUser:IUser, inc:number):IUser{
+    someUser.age+=inc;
+    return someUser
+}
 //
-// console.log(sum(1, 2));
-// showSum(2,3)
-// incAge(user, 2)
+console.log(sum(1, 2));
+showSum(2,3)
+incAge(user, 2)
 
 
 
