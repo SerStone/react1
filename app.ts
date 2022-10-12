@@ -118,8 +118,8 @@ function incAge(someUser:IUser, inc:number):IUser{
 }
 //
 console.log(sum(1, 2));
-showSum(2,3)
-incAge(user, 2)
+showSum(2,3);
+console.log(incAge(user, 2));
 
 
 
